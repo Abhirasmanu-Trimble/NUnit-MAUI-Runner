@@ -4,6 +4,7 @@ using System;
 using System.IO;
 using System.Runtime.Serialization;
 using System.Runtime.Serialization.Formatters.Binary;
+#pragma warning disable SYSLIB0011
 
 namespace NUnit.Framework.Constraints
 {
@@ -39,6 +40,7 @@ namespace NUnit.Framework.Constraints
 
             try
             {
+
                 serializer.Serialize(stream, actual);
 
                 stream.Seek(0, SeekOrigin.Begin);
@@ -62,3 +64,6 @@ namespace NUnit.Framework.Constraints
         }
     }
 }
+
+
+#pragma warning restore SYSLIB0011
